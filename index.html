@@ -11,6 +11,12 @@
   <body>
     <div id="main-content">
         <div id="calculator">
+            <div id="display" class="row">
+                <div class="column">
+                    <p id="expression"></p>
+                    <p id="answer"></p>
+                </div>
+            </div>
             <div id="divide-row" class="row">
                 <div class="column">
                     <button id="clear-all">AC</button>
@@ -20,15 +26,15 @@
                 </div>
 
                 <div class="column">
-                    <button id="abs">&radic;</button>
+                    <button id="sqrt" class="operator">&radic;</button>
                 </div>
                 <div class="column">
-                    <button id="divide">&#247; </button>
+                    <button id="divide" class="operator">&#247; </button>
                 </div>
             </div>
             <div id="multiply-row" class="row">
                 <div class="column">
-                    <button id="seven">7</button>
+                    <button class="button"id="seven">7</button>
                 </div>
                 <div class="column">
                     <button id="eight">8</button>
@@ -37,7 +43,7 @@
                     <button id="nine">9</button>
                 </div>
                 <div class="column">
-                    <button id="multiply">x</button>
+                    <button id="multiply" class="operator">&#215;</button>
                 </div>
             </div> 
             <div id="add-row" class="row">
@@ -51,7 +57,7 @@
                     <button id="six">6</button>
                 </div>
                 <div class="column">
-                    <button id="add">+</button>
+                    <button id="add" class="operator">&#43;</button>
                 </div>
             </div>
             <div id="subtract-row" class="row">
@@ -65,7 +71,7 @@
                     <button id="three">3</button>
                 </div>
                 <div class="column">
-                    <button id="subtract">-</button>
+                    <button id="subtract" class="operator"> &#45; </button>
                 </div>
             </div>
             <div id="zero-row" class="row">
@@ -77,7 +83,7 @@
                     <button id="zero">0</button>
                 </div>
                 <div class="column">
-                    <button id="percentage">&#37; </button>
+                    <button id="percentage" class="operator"> &#37; </button>
                 </div>
                 <div class="column">
                     <button id="equals">=</button>
@@ -85,5 +91,7 @@
             </div>
         </div>
     </div>
-  </body>
+    <p>Made by: <a href="https://github.com/AqueousOtter">AqueousOtter</a></p>
+</body>
+<footer><script src="./scripts.js"></script>
   </html>

@@ -9,6 +9,10 @@ body {
     margin: 0 auto;
 
 }
+#display {
+    border: solid black 2px;
+    width: 75%;
+}
 #calculator {
     width: 25%;
     margin: 0 auto;

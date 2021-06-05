@@ -1,0 +1,36 @@
+
+body {
+
+}
+
+
+#main-content {
+    width: 80%;
+    margin: 0 auto;
+
+}
+#calculator {
+    width: 25%;
+    margin: 0 auto;
+
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+  }
+  
+  .column {
+    flex-basis: 100%;
+    flex: 1;
+  }
+  button {
+      margin: 0;
+      width: 100%;
+  }
+  #zero{
+      flex:  auto;
+  }

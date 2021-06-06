@@ -28,8 +28,6 @@ for (const btn of buttons){
         }
         else if(btn.id == 'exponent'){
             expression.innerHTML += " ^ ";
-            equation = expression.innerHTML.split(" ");
-            expression.innerHTML = (solver(equation)) + (this.innerHTML);
         }
         else if (btn.id =='clear'){
             expression.innerHTML = '';
@@ -81,7 +79,7 @@ function multiply(num1, num2){
     return (num1 * num2);
 };
 function divide(num1, num2){
-    return (num1/num2);
+    return (num1/num2).toFixed(2);
 }
 function exponent(num1, num2){
     return Math.pow(num1, num2);
@@ -102,5 +100,7 @@ function operate(operator, num1, num2){
         case '÷': //alt code 0247 to match entity code in html
             return divide(num1,num2);
             break;
+        case '^':
+            return exponent(num1,num2);
     }
 };

@@ -12,19 +12,24 @@
     <div id="main-content">
         <div id="calculator">
             <div id="display" class="row">
-                <div class="column">
+                <div class="column display">
+                    <p id="history"></p>
                     <p id="expression"></p>
-                    <p id="answer"></p>
+
+                </div>
+                <div class="column">
+                    <button id="backspace">
+                        &lt;
+                    </button>
                 </div>
             </div>
             <div id="divide-row" class="row">
                 <div class="column">
-                    <button id="clear-all">AC</button>
+                    <button id="clear">Clear</button>
                 </div>
                 <div class="column">
-                    <button id="clear">C</button>
+                    <button id="exponent">x&#8319;</button>
                 </div>
-
                 <div class="column">
                     <button id="sqrt" class="single"> &radic; </button>
                 </div>
@@ -80,10 +85,6 @@
                 </div>
                 <div class="column">
                     <button id="decimal">.</button>
-                </div>
-
-                <div class="column">
-                    <button id="percentage" class="operator"> &#37; </button>
                 </div>
                 <div class="column">
                     <button id="equals"> = </button>

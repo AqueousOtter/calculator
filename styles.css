@@ -1,33 +1,59 @@
 
-
+button {
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 18px;
+}
 #main-content {
     width: 80%;
     margin: 0 auto;
 
 }
-#display {
-    border: solid black 2px;
-    width: 75%;
-}
+
 #calculator {
-    width: 25%;
+    width: 30%;
     margin: 0 auto;
 }
+#backspace {
+    height: 100%
+}
+#history {
+    float: left;
+    padding-left: 10px;
+    color: rgb(158, 158, 158);
+}
 
+.operator, #equals, #exponent, #sqrt, #clear{
+    background-color: rgba(255, 166, 0, 0.719);
 
+}
+#clear {
+    background-color: rgb(255, 60, 0);
+}
 .row {
     display: flex;
-    flex-direction: row;
     text-align: center;
-
   }
   
   .column {
-    flex-basis: 100%;
-    flex-grow: 1;
+    flex:1;
+  }
+  .zero{
+      flex: 2;
+  }
+  .display {
+      flex: 3;
+      background-color: rgba(0, 255, 200, 0.171);
+      border: solid black 2px;
+      height: 45px;
+      border-radius: 15px;
+      text-align: right;
+  }
+  .display p {
+      padding-right: 10px;
   }
 
+
   button {
-      margin: 0;
       width: 100%;
   }

@@ -5,9 +5,9 @@ const subtraction = document.getElementById("subtract");
 const multiplication = document.getElementById("multiply");
 const division = document.getElementById("divide");
 const squareRoot = document.getElementById("sqrt");
-const percentage = document.getElementById("percentage");
 const buttons = document.querySelectorAll("button");
 const expression = document.getElementById("expression");
+const history = document.getElementById("history");
 
 //varibles
 let equation;
@@ -26,10 +26,13 @@ for (const btn of buttons){
             num1 = parseInt(equation[0]);
             expression.innerHTML = (Math.sqrt(num1).toFixed(4));
         }
-        else if (btn.id == 'percentage') {
+        else if(btn.id == 'exponent'){
+            expression.innerHTML += " ^ ";
             equation = expression.innerHTML.split(" ");
-            num1 = parseInt(equation[0]);
-            expression.innerHTML = ((num1/100).toFixed(2));
+            expression.innerHTML = (solver(equation)) + (this.innerHTML);
+        }
+        else if (btn.id =='clear'){
+            expression.innerHTML = '';
         }
         else if (btn.id == 'equals'){
             equation = expression.innerHTML.split(" ");
@@ -37,25 +40,16 @@ for (const btn of buttons){
                 expression.innerHTML = (equation[0]);
             }
             else {
-                num1 = parseInt(equation[0]);
-                operator = equation[1];
-                num2 = parseInt(equation[2]);
-                answer = operate(operator, num1, num2);
-                expression.innerHTML = (answer);
+                equation = expression.innerHTML.split(" ");
+                expression.innerHTML = (solver(equation));
+                history.innerHTML = (equation.join(" "));
             }
-   
             operatorsClicked = 0;
         }
         else if (btn.classList == 'operator'){
             if(operatorsClicked > 0){
                 equation = expression.innerHTML.split(" ");
-                console.log(equation);
-                num1 = parseInt(equation[0]);
-                operator = equation[1];
-                num2 = parseInt(equation[2]);
-                answer = operate(operator, num1, num2);
-                console.log(answer);
-                expression.innerHTML = (answer) + (this.innerHTML);
+                expression.innerHTML = (solver(equation)) + (this.innerHTML);
             }
             else{
                 operatorsClicked = 1;
@@ -67,7 +61,15 @@ for (const btn of buttons){
         }
     });
 };
-
+//solver function to help reduce code, splits incoming expression
+function solver(equation){
+    num1 = parseInt(equation[0]);
+    operator = equation[1];
+    num2 = parseInt(equation[2]);
+    answer = operate(operator, num1, num2);
+    history.innerHTML = (equation.join(" "));
+    return answer;
+}
 //math functions
 function add(num1, num2){
     return (num1 + num2);
@@ -80,6 +82,9 @@ function multiply(num1, num2){
 };
 function divide(num1, num2){
     return (num1/num2);
+}
+function exponent(num1, num2){
+    return Math.pow(num1, num2);
 }
 
 //function to take an operator and 2 numbers to call functions

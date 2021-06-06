@@ -24,15 +24,26 @@ for (const btn of buttons){
         if (btn.id == 'sqrt'){
             equation = expression.innerHTML.split(" ");
             num1 = parseInt(equation[0]);
-            expression.innerHTML = (sqrt(num1).toFixed(4));
+            expression.innerHTML = (Math.sqrt(num1).toFixed(4));
+        }
+        else if (btn.id == 'percentage') {
+            equation = expression.innerHTML.split(" ");
+            num1 = parseInt(equation[0]);
+            expression.innerHTML = ((num1/100).toFixed(2));
         }
         else if (btn.id == 'equals'){
             equation = expression.innerHTML.split(" ");
-            num1 = parseInt(equation[0]);
-            operator = equation[1];
-            num2 = parseInt(equation[2]);
-            answer = operate(operator, num1, num2);
-            expression.innerHTML = (answer);
+            if (equation.length < 3){
+                expression.innerHTML = (equation[0]);
+            }
+            else {
+                num1 = parseInt(equation[0]);
+                operator = equation[1];
+                num2 = parseInt(equation[2]);
+                answer = operate(operator, num1, num2);
+                expression.innerHTML = (answer);
+            }
+   
             operatorsClicked = 0;
         }
         else if (btn.classList == 'operator'){
@@ -70,9 +81,6 @@ function multiply(num1, num2){
 function divide(num1, num2){
     return (num1/num2);
 }
-function sqrt(num1){
-    return Math.sqrt(num1);
-}
 
 //function to take an operator and 2 numbers to call functions
 function operate(operator, num1, num2){
@@ -89,9 +97,5 @@ function operate(operator, num1, num2){
         case '÷': //alt code 0247 to match entity code in html
             return divide(num1,num2);
             break;
-        case '%':
-            return;
-            break;
-        
     }
 };

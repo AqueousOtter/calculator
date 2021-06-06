@@ -1,39 +1,68 @@
 html{
-    background-color: white;
+    background-color:  #001f3f ;
+    margin: 0;
 }
 body {
+    margin:  10% auto;
+    font-family: 'Orbitron', sans-serif;
     text-align: center;
+    color: aliceblue;
+    text-shadow:  2px 2px #000000;
+}
+h2 {
+    text-align: right;
+    
+}
+a {
+    text-decoration: none;
+    color: greenyellow;
+    text-shadow:  1px 1px #000000;
+}
+a:hover {
+    font-weight: bold;
+    text-shadow: none;
+    color: black;
+    background-color: greenyellow;
+    
+
 }
 button {
     border: 1px solid black;
     border-radius: 15px;
     font-size: 18px;
+    margin: 5px auto;
+    width: 100%;
+    box-shadow: 4px 5px #000;
 }
+button:active {
+    box-shadow: 3px 3px #000;
+    transform: translateY(4px);
+}
+
 #main-content {
     width: 80%;
     margin: 50px auto;
-
-
 }
 
 #calculator {
     width: 30%;
     height: 10%;
     margin: 0 auto;
-    padding: 5px 45px;
-    border: 2px black solid;
+    padding: 5px 35px;
+    padding-bottom: 20px;
+    border: 15px black outset;
     background-color: #3c3c3e;
 }
 #backspace {
-    height: 50px;
+    height: 60px;
     margin: 0 auto;
+    margin-left: 39px;
+    margin-top: 10px;
+    
 }
-#history {
-    float: left;
-    padding-left: 10px;
-    color: rgb(158, 158, 158);
+#display {
+    width: 90%;
 }
-
 .operator, #equals, #exponent, #sqrt, #clear{
     background-color: rgba(255, 166, 0, 0.719);
 
@@ -43,31 +72,40 @@ button {
 }
 .row {
     display: flex;
-    text-align: center;
+    text-align: center;  
     
   }
-  
   .column {
     flex:1;
   }
   .zero{
       flex: 2;
   }
-  .display {
+  .display, .historyDisplay {
     font-family: 'Press Start 2P', cursive;
-      flex: 3;
-      background-color: rgba(170, 250, 116, 0.877);
-      border: solid black 2px;
-      height: 45px;
-      border-radius: 15px;
-      text-align: right;
+    text-shadow: none;
+    color: black;
+    flex: 3;
+    background-color: rgba(170, 250, 116, 0.877);
+    border: solid black 2px;
+    height: 75px;
+    border-radius: 15px;
+    text-align: right;
+    box-shadow: 2px 2px #000;
   }
   .display p {
       padding-right: 10px;
   }
+.historyDisplay {
+    margin: 10px auto;
+    background-color: rgba(197, 250, 161, 0.801);
+    height: 25px;
+}
+.historyDisplay p {
+    padding-right: 10px;
+    color: rgb(158, 158, 158);
+    font-size: small;
+    margin: auto;
+    margin-top: 5px;
+}
 
-
-  button {
-      margin: 5px auto;
-      width: 100%;
-  }

@@ -7,8 +7,11 @@
     <meta charset="UTF-8"/>
     <title>Calculator</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon.ico">
   </head>
   <body>
     <div id="main-content">
@@ -16,14 +19,19 @@
             <h2>Simple Solver 1.0</h2>
             <div id="display" class="row">
                 <div class="column display">
-                    <p id="history"></p>
                     <p id="expression"></p>
-
                 </div>
                 <div class="column">
                     <button id="backspace">
                         &lt;
                     </button>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="column historyDisplay">
+                        <p id="history"></p>
+                    </div>
                 </div>
             </div>
             <div id="divide-row" class="row">
@@ -93,6 +101,8 @@
                     <button id="equals"> = </button>
                 </div>
             </div>
+            <br>
+            <br>
             <p>Made by: <a href="https://github.com/AqueousOtter">AqueousOtter</a></p>
         </div>
     </div>
